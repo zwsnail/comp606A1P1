@@ -74,7 +74,7 @@ form p > * {
 }
 
 #btn_sign_up {
-    font-size: 20px;
+    font-size: 14px;
     font-family: Robot, sans-serif;
  
     width: 70px;
@@ -82,12 +82,12 @@ form p > * {
     line-height: 28px;
     text-align: center;
  
-    color: rgb(14, 224, 119);
-    background-color: #3BD9FF;
+    color: rgb(15, 53, 155);
+    background-color:yellow;
     border-radius: 6px;
     border: 0;
  
-    float: left;
+    float: center;
 }
  
 #forget_pwd {

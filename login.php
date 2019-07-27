@@ -1,50 +1,29 @@
-<?php 
-include_once("functions/database.php"); 
-//收集表单提交数据 
-$username = addslashes($_POST['username']); 
-$password = addslashes($_POST['password']); 
-//连接数据库服务器 
-getConnection(); 
-//判断用户名和密码是否输入正确 
-$sql = "select * from users where userName='$username' and password='$password'"; 
-$resultSet = mysql_query($sql); 
-if(mysql_num_rows($resultSet)>0){ 
-     echo "Success!"; 
-}else{ 
-     echo "Something Wrong!"; 
-} 
-closeConnection(); 
-?> 
-
-//https://blog.csdn.net/qq_35661627/article/details/78564319
-
-
-
-
-
-/*另一种！！！！！
-
 <?php
 // define variables and set to empty values
-$nameErr = $emailErr = $genderErr = $websiteErr = "";
-$name = $email = $gender = $comment = $website = "";
+$erro= "";
+if (empty($_POST["username"]) || empty($_POST["password"])) {
+  $erro = "Username or Password is required";
+} else {
+  $username = $_POST["username"];
+  $password = $_POST["password"]
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name"])) {
-    $nameErr = "Name is required";
-  } else {
-    $name = test_input($_POST["name"]);
-    // check if name only contains letters and whitespace
-    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-      $nameErr = "Only letters and white space allowed"; 
+  // connetion
+
+  $conn = @ mysql_connect("localhost", "root", "") or die("数据库连接错误");
+  // select database
+  $db = mysqli_select_db($conn, "test");
+  //sql query to fetch regstered user
+  $query = mysqli_query($conn, "SELECT * FROM userpass WHERE username= '$username' AND password='$password'");
+
+  $rows = mysqli_num_rows($query);
+    if($rows == 1){
+        header("Location: login_register.php");//redirect to other page
+    }else{
+      $error = "Username of Password is In valid";
     }
-  }
-}
-
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
+  mysqli_close($conn)//close connection
 }
 ?>
+
+
+

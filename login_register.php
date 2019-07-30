@@ -1,17 +1,8 @@
 <?php
-include("login.php")
+include("login.php");
 ?>
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>login Page</title>
- 
-    <link rel="stylesheet" type="text/css" href="login.css"/>
-    <script type="text/javascript" src="login.js"></script>
-</head>
+<?php require_once("header.php"); ?>
 
 
 <body>
@@ -21,8 +12,8 @@ include("login.php")
  
     <form method="post" action="login.php">
  
-        <p><label class="label_input">username</label><input type="text" id="username" class="text_field"/></p>
-        <p><label class="label_input">password</label><input type="text" id="password" class="text_field"/></p>
+        <p><label class="label_input">username</label><input type="text" id="username" class="text_field" require></p>
+        <p><label class="label_input">password</label><input type="text" id="password" class="text_field" require></p>
  
         <div id="login_control">
             <input type="submit" id="btn_login" value="Login" a href="welcome.php"/>
@@ -33,6 +24,6 @@ include("login.php")
     </form>
 </div>
 <span><?php echo $error; ?><span>
- 
-</body>
-</html>
+
+
+<?php require_once("footer.php"); ?>

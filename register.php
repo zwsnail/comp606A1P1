@@ -1,16 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+<?php require_once("header.php"); ?>
 <body>
-    <form>
-        username<input type="text" name="username">
-        password<input type="text" name="password">
+<div>
+<form action="register.php" method="post">
+  <fieldset>
+    <legend>Create your information:</legend>
+    Username:<br>
+    <input type="text" name="username" value="" require>
+    <br>
+    Password:<br>
+    <input type="text" name="password" value="" require>
+    <br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
 </form>
-
+</div>
 </body>
-</html>
+
+<?php require_once("footer.php"); ?>

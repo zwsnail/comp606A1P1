@@ -1,19 +1,17 @@
 <?php
-include("includes/dbh.inc.connection.php");
-require_once("header.php");
-session_start();
+include "includes/dbh.inc.connection.php";
+require_once "header.php";
+
 ?>
 <div id="form_position">
 <form action="includes/login.inc.php" method="post">
-  <div class="imgcontainer">
-    <img src="img/logo.png" alt="img" class="img">
-  </div>
 
   <div class="container">
-    <label for="uid"><b>Username</b></label>
+   <h1>Login</h1>
+    <hr>
+    <b>Username</b>
     <input type="text" placeholder="Enter Username" name="uid" required>
-
-    <label for="pwd"><b>Password</b></label>
+    <b>Password</b>
     <input type="password" placeholder="Enter Password" name="pwd" required>
     <button type="submit" name="login-sumbit">Login</button>
   </div>
@@ -27,5 +25,3 @@ session_start();
 
 <span><?php echo $error; ?><span>
 
-
-<?php require_once("footer.php"); ?>

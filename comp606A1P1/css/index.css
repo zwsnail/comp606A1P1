@@ -1,22 +1,22 @@
 /* Bordered form */
 #form_position{
-  margin: 0px auto;
-  text-align: center;
+  margin: 100px auto;
+  text-align: left;
+  
 }
 body {
   background-image: url(../img/steve-jobs-banksy.jpg)
   /* background-size: cover; */
 }
 form {
-  border: 3px solid #c6fcc4ec;
-  position: center;
-  width:500px;
+  border: none;
+  width:350px;
   display: inline-block;
 }
 
 /* inputs */
 input[type=text], input[type=password] {
-  width: 50%;
+  width: 10%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -51,22 +51,15 @@ button:hover {
   padding: 10px 18px;
   background-color: #3647aa;
 }
-
-/* Center logo inside */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-
-/* logo */
-img.avatar {
-  width: 100%;
-  border-radius: 50%;
+/* b color*/
+b {
+  color:#3647aa;
+  font-size: 30px
 }
 
 /* Add padding to containers */
 .container {
-  padding: 70px;
+  padding: 10px;
 }
 
   

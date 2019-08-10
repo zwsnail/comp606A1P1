@@ -1,10 +1,6 @@
 <?php
 require_once "dbh.inc.connection.php";
-
-
-
-
-
+session_start();
 
 
 $username = $_POST["uid"];
@@ -16,18 +12,15 @@ $rows = mysqli_num_rows($result);
 $row = mysqli_fetch_array($result, MYSQLI_NUM);
 
 
-
 if($rows ==1) {
-    session_start();
-    // Set session variables
-    $_SESSION['loggedin'] = true;
+    $_SESSION['uid'] = true;
     $_SESSION['uid'] = $username;
     header("Location: ../welcome.php?");
 }else
-    echo "Sorry, something wrong.";
+    header("Location: ../welcome.php?");
 
 
-mysqli_close($conn);
+
 
 
 

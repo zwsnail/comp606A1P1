@@ -1,6 +1,6 @@
 <?php
-include("includes/dbh.inc.connection.php");
-require_once("header.php");
+include "includes/dbh.inc.connection.php";
+require_once "header.php";
 session_start();
 ?>
 
@@ -18,23 +18,21 @@ session_start();
 
     <label for="pwd-repeat"><b>Repeat Password</b></label>
     <input type="password" placeholder="Repeat Password" name="pwd-repeat" required>
-    <hr>
     <?php
           if (isset($_GET['error'])){
               if ($_GET['error'] == "passwordcheck"){
-                  echo '<p style="color:red;">Your passwords do not match!</p>';
+                  echo '<h5 style="color:red;">Your passwords do not match!</h5>';
               }
               else if ($_GET['error'] == "usertaken"){
-                  echo '<p style="color:red;">Username is already taken!</p>';
+                  echo '<h5 style="color:red;">Username is already taken!</h5>';
               }
           }
         ?>
-  
     <button type="submit" class="signup-submit">Sign up</button>
   </div>
 
   <div class="container signin">
-    <p>Already have an account? <a href="index.php">Sign in</a>.</p>
+    <p>Already have an account? <a href="index.php">Login</a></p>
   </div>
 </form>
 </body>

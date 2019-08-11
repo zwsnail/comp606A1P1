@@ -11,7 +11,7 @@ if(isset($_SESSION['uid']) & $_SESSION['uid']==true){
     <h1>Welcome $username!</h1>";
     <button type="button" class="signup" onclick="window.location.href='index.php'">Logout</button>
 _END;
-}else{
+}else{// If the input name not in the system, display blow
     echo <<<_END
     <h1>Sorry, can't find you, would you like to sign up?</h1>
     <button type="button" class="signup" onclick="window.location.href='signup.php'">Signup</button>

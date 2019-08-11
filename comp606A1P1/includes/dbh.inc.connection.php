@@ -3,8 +3,8 @@
 error_reporting(0);
 
 $dbServername = "localhost";
-$dbUsername = "root";
-$dBPassword = "";
+$dbUsername = "comp606";
+$dBPassword = "A1P1";
 $dBName = "loginsystemtut";
 
 $conn = mysqli_connect($dbServername, $dbUsername, $dBPassword, $dBName);

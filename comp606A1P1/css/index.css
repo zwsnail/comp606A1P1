@@ -5,28 +5,13 @@
   
 }
 body {
-  background-image: url(../img/steve-jobs-banksy.jpg)
+  background-image: url(../img/steve-jobs-banksy.jpg);
   /* background-size: cover; */
 }
 form {
   border: none;
-  width:350px;
+  width: 340px;
   display: inline-block;
-}
-
-/* inputs */
-input[type=text], input[type=password] {
-  width: 10%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  size: "18";
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-b {
-  color: white;
 }
 
 /* login button */
@@ -54,12 +39,7 @@ button:hover {
 /* b color*/
 b {
   color:#3647aa;
-  font-size: 30px
-}
-
-/* Add padding to containers */
-.container {
-  padding: 10px;
+  font-size: 25px;
 }
 
   

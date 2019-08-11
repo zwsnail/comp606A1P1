@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主机： localhost
--- 生成日期： 2019-08-10 07:39:42
+-- 生成日期： 2019-08-11 10:52:27
 -- 服务器版本： 10.3.16-MariaDB
 -- PHP 版本： 7.3.7
 
@@ -54,7 +54,9 @@ INSERT INTO `users` (`idUsers`, `uidUsers`, `pwdUsers`) VALUES
 (125, 'moon', 'moon'),
 (126, 'star', 'star'),
 (127, 'stone', '$2y$10$GlEFWagC3euN7l6RcZou.OOi1eAg2KyS1LlZrkFf7ExRsvWqMOyZu'),
-(128, 'fly', '$2y$10$0UHIf9GduTF4fDJ7Q9e4yODGSu3U1.mR5wE5JycXLcJnlBXdf.0R2');
+(128, 'fly', '$2y$10$0UHIf9GduTF4fDJ7Q9e4yODGSu3U1.mR5wE5JycXLcJnlBXdf.0R2'),
+(129, 'wei', '$2y$10$AjLF0AtlarKfsD8XWYyTs.yDJWfPlnncU21T4W3Har02ZU7kn.t1a'),
+(130, 'cow', '$2y$10$.dlGm/giNq1I7tDR9YVkKu.IyQx53VAbufk.f1J46sDFWz81lZLYG');
 
 --
 -- 转储表的索引
@@ -74,7 +76,7 @@ ALTER TABLE `users`
 -- 使用表AUTO_INCREMENT `users`
 --
 ALTER TABLE `users`
-  MODIFY `idUsers` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
+  MODIFY `idUsers` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

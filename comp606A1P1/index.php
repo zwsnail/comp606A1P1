@@ -23,5 +23,3 @@ require_once "header.php";
 </div>
 </body>
 
-<span><?php echo $error; ?><span>
-
